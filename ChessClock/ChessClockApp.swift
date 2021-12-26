@@ -11,7 +11,11 @@ import SwiftUI
 struct ChessClockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let timeControls = [
+                TimeControl(firstMove: 1, lastMove: 10, increment: 0, timeInterval: 20.0)
+            ]
+            let vm = TwoClockViewModel(timeControls: timeControls)
+            TwoClockView(vm: vm)
         }
     }
 }

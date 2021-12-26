@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5366BCA6277719AA00BEC083 /* ChessClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCA5277719AA00BEC083 /* ChessClockApp.swift */; };
-		5366BCA8277719AA00BEC083 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCA7277719AA00BEC083 /* ContentView.swift */; };
+		5366BCA8277719AA00BEC083 /* TwoClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCA7277719AA00BEC083 /* TwoClockView.swift */; };
 		5366BCAA277719AB00BEC083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5366BCA9277719AB00BEC083 /* Assets.xcassets */; };
 		5366BCAD277719AB00BEC083 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5366BCAC277719AB00BEC083 /* Preview Assets.xcassets */; };
 		5366BCB7277719AC00BEC083 /* ChessClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCB6277719AC00BEC083 /* ChessClockTests.swift */; };
 		5366BCC1277719AC00BEC083 /* ChessClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCC0277719AC00BEC083 /* ChessClockUITests.swift */; };
 		5366BCC3277719AC00BEC083 /* ChessClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCC2277719AC00BEC083 /* ChessClockUITestsLaunchTests.swift */; };
+		5366BCD027771A6D00BEC083 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCCF27771A6D00BEC083 /* ClockView.swift */; };
+		5366BCD227771AC800BEC083 /* TwoClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCD127771AC800BEC083 /* TwoClockViewModel.swift */; };
+		5366BCD427771B3B00BEC083 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCD327771B3B00BEC083 /* Player.swift */; };
+		5366BCD627771B9D00BEC083 /* PieceColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCD527771B9D00BEC083 /* PieceColor.swift */; };
+		5366BCD92777210700BEC083 /* TimeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCD82777210700BEC083 /* TimeControl.swift */; };
+		5366BCDB277724F300BEC083 /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCDA277724F300BEC083 /* ClockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,7 @@
 /* Begin PBXFileReference section */
 		5366BCA2277719AA00BEC083 /* ChessClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5366BCA5277719AA00BEC083 /* ChessClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClockApp.swift; sourceTree = "<group>"; };
-		5366BCA7277719AA00BEC083 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5366BCA7277719AA00BEC083 /* TwoClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoClockView.swift; sourceTree = "<group>"; };
 		5366BCA9277719AB00BEC083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5366BCAC277719AB00BEC083 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5366BCB2277719AC00BEC083 /* ChessClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +50,12 @@
 		5366BCBC277719AC00BEC083 /* ChessClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5366BCC0277719AC00BEC083 /* ChessClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClockUITests.swift; sourceTree = "<group>"; };
 		5366BCC2277719AC00BEC083 /* ChessClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5366BCCF27771A6D00BEC083 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		5366BCD127771AC800BEC083 /* TwoClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoClockViewModel.swift; sourceTree = "<group>"; };
+		5366BCD327771B3B00BEC083 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5366BCD527771B9D00BEC083 /* PieceColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceColor.swift; sourceTree = "<group>"; };
+		5366BCD82777210700BEC083 /* TimeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControl.swift; sourceTree = "<group>"; };
+		5366BCDA277724F300BEC083 /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				5366BCA5277719AA00BEC083 /* ChessClockApp.swift */,
-				5366BCA7277719AA00BEC083 /* ContentView.swift */,
+				5366BCDC2778887B00BEC083 /* Two clock view */,
+				5366BCDD2778889300BEC083 /* Clock view */,
 				5366BCA9277719AB00BEC083 /* Assets.xcassets */,
 				5366BCAB277719AB00BEC083 /* Preview Content */,
+				5366BCD727771C0E00BEC083 /* models */,
 			);
 			path = ChessClock;
 			sourceTree = "<group>";
@@ -125,6 +139,34 @@
 				5366BCC2277719AC00BEC083 /* ChessClockUITestsLaunchTests.swift */,
 			);
 			path = ChessClockUITests;
+			sourceTree = "<group>";
+		};
+		5366BCD727771C0E00BEC083 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5366BCD327771B3B00BEC083 /* Player.swift */,
+				5366BCD527771B9D00BEC083 /* PieceColor.swift */,
+				5366BCD82777210700BEC083 /* TimeControl.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		5366BCDC2778887B00BEC083 /* Two clock view */ = {
+			isa = PBXGroup;
+			children = (
+				5366BCD127771AC800BEC083 /* TwoClockViewModel.swift */,
+				5366BCA7277719AA00BEC083 /* TwoClockView.swift */,
+			);
+			path = "Two clock view";
+			sourceTree = "<group>";
+		};
+		5366BCDD2778889300BEC083 /* Clock view */ = {
+			isa = PBXGroup;
+			children = (
+				5366BCDA277724F300BEC083 /* ClockViewModel.swift */,
+				5366BCCF27771A6D00BEC083 /* ClockView.swift */,
+			);
+			path = "Clock view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5366BCA8277719AA00BEC083 /* ContentView.swift in Sources */,
+				5366BCD92777210700BEC083 /* TimeControl.swift in Sources */,
+				5366BCA8277719AA00BEC083 /* TwoClockView.swift in Sources */,
+				5366BCD227771AC800BEC083 /* TwoClockViewModel.swift in Sources */,
+				5366BCD027771A6D00BEC083 /* ClockView.swift in Sources */,
+				5366BCDB277724F300BEC083 /* ClockViewModel.swift in Sources */,
+				5366BCD427771B3B00BEC083 /* Player.swift in Sources */,
+				5366BCD627771B9D00BEC083 /* PieceColor.swift in Sources */,
 				5366BCA6277719AA00BEC083 /* ChessClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
