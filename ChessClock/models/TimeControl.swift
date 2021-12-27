@@ -54,10 +54,20 @@ extension TimeInterval {
         let intHours = Int(self/3600)
         let intMinutes = Int((self - Double(intHours) * 3600.0)/60)
         let intSeconds = Int((self - Double(intHours) * 3600.0 - Double(intMinutes) * 60))
-        return String("\(intHours):\(intMinutes):\(intSeconds)")
+        return String(
+            "\(intHours.formatted02d) : \(intMinutes.formatted02d) : \(intSeconds.formatted02d)"
+        )
     }
     
     var formattedStringWithTenths: String {
-        formattedString + ":\(Int((self - Double(Int(self)))*10))"
+        let intTenths = Int((self - Double(Int(self)))*100)
+        return formattedString + " : \(intTenths.formatted02d)"
     }
+}
+
+extension Int {
+    var formatted02d: String {
+        String(format: "%02d", self)
+    }
+    
 }

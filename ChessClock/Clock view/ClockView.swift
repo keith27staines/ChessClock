@@ -19,7 +19,7 @@ struct ClockView: View {
             Text(vm.player.name)
                 .font(.headline)
             Text(vm.timeRemainingString)
-                .font(.largeTitle)
+                .font(.system(size: 20, weight: .heavy, design: .monospaced))
         }
         
     }

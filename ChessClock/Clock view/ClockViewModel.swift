@@ -99,6 +99,7 @@ class ClockViewModel: ObservableObject {
             timeRemainingString = timeRemaining.formattedString
         } else {
             timeRemainingString = timeRemaining.formattedStringWithTenths
+            print(timeRemainingString)
         }
     }
 
@@ -109,7 +110,7 @@ class ClockViewModel: ObservableObject {
                 return timeCarriedForward + tc.timeInterval - moves.timeSpentInTimeControl(tc)
             } else {
                 // completed time control
-                timeCarriedForward +=  tc.timeInterval - moves.timeSpentInTimeControl(tc)
+                timeCarriedForward += tc.timeInterval - moves.timeSpentInTimeControl(tc)
             }
         }
         return timeCarriedForward
