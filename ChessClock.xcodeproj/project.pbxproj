@@ -20,6 +20,8 @@
 		5366BCD627771B9D00BEC083 /* PieceColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCD527771B9D00BEC083 /* PieceColor.swift */; };
 		5366BCD92777210700BEC083 /* TimeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCD82777210700BEC083 /* TimeControl.swift */; };
 		5366BCDB277724F300BEC083 /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCDA277724F300BEC083 /* ClockViewModel.swift */; };
+		5366BCE02779A68D00BEC083 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366BCDF2779A68D00BEC083 /* ButtonStyles.swift */; };
+		53C80FD3277B20A200B87573 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C80FD2277B20A200B87573 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		5366BCD527771B9D00BEC083 /* PieceColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceColor.swift; sourceTree = "<group>"; };
 		5366BCD82777210700BEC083 /* TimeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControl.swift; sourceTree = "<group>"; };
 		5366BCDA277724F300BEC083 /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		5366BCDF2779A68D00BEC083 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		53C80FD2277B20A200B87573 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5366BCA5277719AA00BEC083 /* ChessClockApp.swift */,
+				5366BCDE2779A66900BEC083 /* Styling */,
 				5366BCDC2778887B00BEC083 /* Two clock view */,
 				5366BCDD2778889300BEC083 /* Clock view */,
 				5366BCA9277719AB00BEC083 /* Assets.xcassets */,
@@ -167,6 +172,15 @@
 				5366BCCF27771A6D00BEC083 /* ClockView.swift */,
 			);
 			path = "Clock view";
+			sourceTree = "<group>";
+		};
+		5366BCDE2779A66900BEC083 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				5366BCDF2779A68D00BEC083 /* ButtonStyles.swift */,
+				53C80FD2277B20A200B87573 /* Color+Extensions.swift */,
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +317,8 @@
 				5366BCA8277719AA00BEC083 /* TwoClockView.swift in Sources */,
 				5366BCD227771AC800BEC083 /* TwoClockViewModel.swift in Sources */,
 				5366BCD027771A6D00BEC083 /* ClockView.swift in Sources */,
+				5366BCE02779A68D00BEC083 /* ButtonStyles.swift in Sources */,
+				53C80FD3277B20A200B87573 /* Color+Extensions.swift in Sources */,
 				5366BCDB277724F300BEC083 /* ClockViewModel.swift in Sources */,
 				5366BCD427771B3B00BEC083 /* Player.swift in Sources */,
 				5366BCD627771B9D00BEC083 /* PieceColor.swift in Sources */,
@@ -475,7 +491,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +521,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,7 +544,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q4783BNZ95;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,7 +569,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q4783BNZ95;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

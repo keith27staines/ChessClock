@@ -72,6 +72,10 @@ class ClockViewModel: ObservableObject {
         state = .waiting(lastMove: currentMoveNumber)
     }
     
+    func stop() {
+        timer?.cancel()
+    }
+    
     private func startNewTimer() {
         timer?.cancel()
         timer = Timer.publish(every: 0.1, tolerance: 0.1, on: .main, in: .common)
