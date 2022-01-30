@@ -52,7 +52,12 @@ struct ClockView_Previews: PreviewProvider {
         let vm = ClockViewModel(
             player: Player(name: "Player 1", pieceColor: .white),
             timeControls: [
-                TimeControl(firstMove: 1, lastMove: 10, increment: 0, timeInterval: 20.0)
+                TimeControl(
+                    firstMoveNumber: 1,
+                    lastMoveNumber: 10,
+                    interval: 20.0,
+                    increment: 0
+                )
             ]
         )
         ClockView(vm: vm)

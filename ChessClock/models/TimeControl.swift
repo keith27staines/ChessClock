@@ -8,18 +8,18 @@
 import Foundation
 
 struct TimeControl: Hashable {
-    let firstMove: Int
-    let lastMove: Int
-    let increment: Int
-    let timeInterval: TimeInterval
-    var moveRange: ClosedRange<Int> { (firstMove...lastMove) }
+    let firstMoveNumber: Int
+    let lastMoveNumber: Int
+    let interval: TimeInterval
+    let increment: TimeInterval
+    var moveRange: ClosedRange<Int> { (firstMoveNumber...lastMoveNumber) }
 }
 
 extension Array where Element == TimeControl {
     func timeControlForMove(_ move: Int) -> TimeControl {
         first { timeControl in
-            (timeControl.firstMove...timeControl.lastMove).contains(move)
-        } ?? TimeControl(firstMove: move, lastMove: Int.max, increment: 0, timeInterval: 0)
+            (timeControl.firstMoveNumber...timeControl.lastMoveNumber).contains(move)
+        } ?? TimeControl(firstMoveNumber: move, lastMoveNumber: Int.max, interval: 0, increment: 0)
     }
     
     func completedOrInProgress(_ move: Int) -> [TimeControl] {

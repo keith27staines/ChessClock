@@ -14,18 +14,20 @@ struct TwoClockView: View {
     @Namespace private var animation
     
     var body: some View {
-        VStack {
-            topButtonsStack
-                .padding()
-            Spacer()
-            twoClocksStack
-                .frame(maxWidth: .infinity)
-                .padding(.bottom)
-            Spacer()
-            timerButton
+        NavigationView {
+            VStack {
+                topButtonsStack
+                    .padding()
+                Spacer()
+                twoClocksStack
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom)
+                Spacer()
+                timerButton
+            }
+            .padding()
+            .navigationBarHidden(true)
         }
-        .padding()
-        
     }
     
     var topButtonsStack: some View {
@@ -33,7 +35,11 @@ struct TwoClockView: View {
             Spacer()
             endGameButton
             Spacer()
-            settingsButton
+            NavigationLink {
+                TimeControlManagementView()
+            } label: {
+                settingsButton
+            }
             Spacer()
         }
     }

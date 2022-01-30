@@ -54,7 +54,7 @@ class ClockViewModel: ObservableObject {
         self.player = player
         self.timeControls = timeControls
         guard let firstControl = timeControls.first else { return }
-        setTimeRemainingFields(firstControl.timeInterval)
+        setTimeRemainingFields(firstControl.interval)
     }
     
     func beginMove() {
@@ -111,10 +111,10 @@ class ClockViewModel: ObservableObject {
         var timeCarriedForward: TimeInterval = 0
         for tc in timeControls.completedOrInProgress(currentMoveNumber) {
             if tc == currentTimeControl {
-                return timeCarriedForward + tc.timeInterval - moves.timeSpentInTimeControl(tc)
+                return timeCarriedForward + tc.interval - moves.timeSpentInTimeControl(tc)
             } else {
                 // completed time control
-                timeCarriedForward += tc.timeInterval - moves.timeSpentInTimeControl(tc)
+                timeCarriedForward += tc.interval - moves.timeSpentInTimeControl(tc)
             }
         }
         return timeCarriedForward

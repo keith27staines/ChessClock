@@ -12,7 +12,7 @@ class TwoClockViewModel: ObservableObject {
     
     static let testModel = TwoClockViewModel(
         timeControls: [
-            TimeControl(firstMove: 1, lastMove: 10, increment: 0, timeInterval: 20.0)
+            TimeControl(firstMoveNumber: 1, lastMoveNumber: 10, interval: 20.0, increment: 0)
         ]
     )
     
@@ -34,9 +34,9 @@ class TwoClockViewModel: ObservableObject {
     
     var players: [Player]
     var timeControls: [TimeControl]
-    var subscriptions = Set<AnyCancellable>()
     var clockModels: [ClockViewModel] = []
     var activePlayerIndex: Int
+    var subscriptions = Set<AnyCancellable>()
     
     var inactivePlayerIndex: Int {
         activePlayerIndex == 0 ? 1 : 0
