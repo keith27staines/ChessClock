@@ -29,7 +29,7 @@ enum GameCategory: String, Codable {
 
 
 /// The list of time control definitions for all moves in a game
-struct GameDefinition: Codable, Identifiable {
+struct GameDefinition: Codable, Hashable, Identifiable {
     var id: Int
     var category: GameCategory
     var controls: [TimeControlDefinition]
@@ -38,15 +38,35 @@ struct GameDefinition: Codable, Identifiable {
     var name: String {
         category.rawValue
     }
+    
+    func description(for control: TimeControlDefinition) -> String {
+        guard controls.count > 0 else { return "" }
+        let moves = control.numberOfMoves
+        var movesString: String = ""
+        if controls.count == 1 {
+            movesString  = "All moves"
+        } else {
+            if control != controls.last {
+                movesString = "\(moves) moves"
+            }
+        }
+        return "\(movesString): \(control.description)"
+    }
 }
 
 /// The definition of a time control for a prescribed number of moves
-struct TimeControlDefinition: Codable {
+struct TimeControlDefinition: Codable, Hashable, Identifiable {
+    var id: Int
     var numberOfMoves: Int
     var interval: TimeInterval
     var increment: TimeInterval
     
     var description: String {
-        "\(interval*60) + \(increment)"
+        switch interval {
+        case let minutes where minutes < 60:
+            return "\(Int(interval))s + \(Int(increment))s"
+        default:
+            return "\(Int(interval/60))m + \(Int(increment))s"
+        }
     }
 }

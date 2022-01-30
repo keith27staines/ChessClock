@@ -11,9 +11,9 @@ import XCTest
 class TimeControlManagerTests: XCTestCase {
     
     let testDefinitions: [TimeControlDefinition] = [
-        .init(numberOfMoves: 10, interval: 1800, increment: 10),
-        .init(numberOfMoves: 10, interval: 1800, increment: 10),
-        .init(numberOfMoves: 10, interval: 1800, increment: 10),
+        .init(id: 0, numberOfMoves: 10, interval: 1800, increment: 10),
+        .init(id: 1, numberOfMoves: 10, interval: 1800, increment: 10),
+        .init(id: 2, numberOfMoves: 10, interval: 1800, increment: 10),
     ]
     
     let testControls = [

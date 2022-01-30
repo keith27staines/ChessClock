@@ -24,7 +24,6 @@
 		53C80FD3277B20A200B87573 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C80FD2277B20A200B87573 /* Color+Extensions.swift */; };
 		53C80FD5277D72BE00B87573 /* TimeControlManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C80FD4277D72BE00B87573 /* TimeControlManagerTests.swift */; };
 		53C80FD7277D961900B87573 /* TimeControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C80FD6277D961900B87573 /* TimeControlManager.swift */; };
-		53C80FDA277D9A1000B87573 /* TimeControlManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C80FD9277D9A1000B87573 /* TimeControlManagementView.swift */; };
 		53DEFE8727A5421B005129F8 /* TimeControlDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFE8627A5421B005129F8 /* TimeControlDefinition.swift */; };
 		53DEFE8927A54332005129F8 /* Bundle+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFE8827A54332005129F8 /* Bundle+extensions.swift */; };
 		53DEFE8D27A560F7005129F8 /* Library.json in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFE8B27A5439F005129F8 /* Library.json */; };
@@ -72,7 +71,6 @@
 		53C80FD2277B20A200B87573 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		53C80FD4277D72BE00B87573 /* TimeControlManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControlManagerTests.swift; sourceTree = "<group>"; };
 		53C80FD6277D961900B87573 /* TimeControlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControlManager.swift; sourceTree = "<group>"; };
-		53C80FD9277D9A1000B87573 /* TimeControlManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControlManagementView.swift; sourceTree = "<group>"; };
 		53DEFE8627A5421B005129F8 /* TimeControlDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControlDefinition.swift; sourceTree = "<group>"; };
 		53DEFE8827A54332005129F8 /* Bundle+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extensions.swift"; sourceTree = "<group>"; };
 		53DEFE8B27A5439F005129F8 /* Library.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = Library.json; sourceTree = "<group>"; };
@@ -172,6 +170,8 @@
 		5366BCD727771C0E00BEC083 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				53DEFE9527A66742005129F8 /* LibraryViewModel.swift */,
+				53DEFE8B27A5439F005129F8 /* Library.json */,
 				5366BCD327771B3B00BEC083 /* Player.swift */,
 				5366BCD527771B9D00BEC083 /* PieceColor.swift */,
 				5366BCD82777210700BEC083 /* TimeControl.swift */,
@@ -211,7 +211,6 @@
 		53C80FD8277D99EC00B87573 /* Time control management view */ = {
 			isa = PBXGroup;
 			children = (
-				53C80FD9277D9A1000B87573 /* TimeControlManagementView.swift */,
 				53DEFE9427A66724005129F8 /* Library */,
 			);
 			path = "Time control management view";
@@ -228,9 +227,7 @@
 		53DEFE9427A66724005129F8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				53DEFE8B27A5439F005129F8 /* Library.json */,
 				53DEFE9227A57184005129F8 /* LibraryView.swift */,
-				53DEFE9527A66742005129F8 /* LibraryViewModel.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -378,7 +375,6 @@
 				5366BCD427771B3B00BEC083 /* Player.swift in Sources */,
 				5366BCD627771B9D00BEC083 /* PieceColor.swift in Sources */,
 				53DEFE8727A5421B005129F8 /* TimeControlDefinition.swift in Sources */,
-				53C80FDA277D9A1000B87573 /* TimeControlManagementView.swift in Sources */,
 				5366BCA6277719AA00BEC083 /* ChessClockApp.swift in Sources */,
 				53DEFE9627A66742005129F8 /* LibraryViewModel.swift in Sources */,
 				53DEFE9327A57184005129F8 /* LibraryView.swift in Sources */,

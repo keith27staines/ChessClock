@@ -9,10 +9,14 @@ import Foundation
 
 class LibraryViewModel: ObservableObject {
     
-    var library: Library
+    @Published var gameDefinitions: [GameDefinition]
+    @Published var selectedGameDefinition: GameDefinition?
+    
+    private var library: Library
     
     init() {
         library = Bundle.main.decode(Library.self, from: "Library.json")
+        gameDefinitions = library.gameDefinitions
     }
     
 }

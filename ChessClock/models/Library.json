@@ -1,0 +1,160 @@
+{
+    "gameDefinitions":[
+        {
+            "id": 0,
+            "category":"hyper-bullet",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":30,
+                    "increment":0
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "category":"bullet",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":60,
+                    "increment":0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "category":"bullet",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":120,
+                    "increment":1
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category":"bullet",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":180,
+                    "increment":0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "category":"blitz",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":180,
+                    "increment":2
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "category":"blitz",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":300,
+                    "increment":0
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "category":"blitz",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":300,
+                    "increment":3
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "category":"rapid",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":600,
+                    "increment":0
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "category":"rapid",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":600,
+                    "increment":5
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "category":"rapid",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":900,
+                    "increment":10
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "category":"classical",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":900,
+                    "increment":10
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "category":"classical",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":900,
+                    "increment":20
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "category":"classical",
+            "controls":[
+                {
+                    "id": 0,
+                    "numberOfMoves":1000000,
+                    "interval":900,
+                    "increment":30
+                }
+            ]
+        }
+    ]
+}

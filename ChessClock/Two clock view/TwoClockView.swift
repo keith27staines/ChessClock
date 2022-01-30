@@ -18,6 +18,7 @@ struct TwoClockView: View {
             VStack {
                 topButtonsStack
                     .padding()
+                Divider()
                 Spacer()
                 twoClocksStack
                     .frame(maxWidth: .infinity)
@@ -32,15 +33,26 @@ struct TwoClockView: View {
     
     var topButtonsStack: some View {
         HStack {
-            Spacer()
             endGameButton
             Spacer()
-            NavigationLink {
-                TimeControlManagementView()
-            } label: {
-                settingsButton
+            VStack {
+                NavigationLink {
+                    LibraryView(vm: vm.libraryViewModel)
+                        .navigationTitle("Time Controls")
+                        .navigationBarTitleDisplayMode(.inline)
+                } label: {
+                    Text(vm.selectTimeControlButtonText)
+                }
+                .disabled(vm.isTimeControlButtonDisabled)
+                
+                ZStack {
+                    EmptyView()
+                    if let gameDefinition = vm.gameDefinition {
+                        GameDefinitionView(gameDefinition)
+                    }
+                }
             }
-            Spacer()
+
         }
     }
     
@@ -132,6 +144,6 @@ struct TwoClockView_Previews: PreviewProvider {
     static var previews: some View {
         TwoClockView(vm: TwoClockViewModel.testModel)
             .preferredColorScheme(.dark)
-            .previewInterfaceOrientation(.landscapeRight)
+            .previewInterfaceOrientation(.portrait)
     }
 }

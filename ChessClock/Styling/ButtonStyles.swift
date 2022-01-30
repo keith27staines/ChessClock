@@ -36,14 +36,21 @@ struct ChessEndMoveButtonStyle: ButtonStyle {
     let disabled: Bool
      
     func makeBody(configuration: Self.Configuration) -> some View {
+        let foregroundColor = disabled ? Color("DisabledForegroundColor") : ChessButtonStyleType.primary.foregroundColor
+        
+        let backgroundColor = disabled ? Color("DisabledBackgroundColor") : ChessButtonStyleType.primary.backgroundColor
+        
+        let shadowColor = Color.primary.opacity(disabled ? 0.1 : 0.4)
+        
         configuration.label
-            .foregroundColor(.white)
+            .foregroundColor(foregroundColor)
             .padding()
             .padding()
             .frame(maxWidth: .infinity)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.green)
+                    .foregroundColor(backgroundColor)
+                    .shadow(color: shadowColor, radius: 5, x: 0, y: 5)
             )
             .scaleEffect(configuration.isPressed ? 0.9 : 1)
                         .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
@@ -63,7 +70,7 @@ struct ChessButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         let foregroundColor = disabled ? Color("DisabledForegroundColor") :  buttonType.foregroundColor
         let backgroundColor = disabled ? Color("DisabledBackgroundColor") : buttonType.backgroundColor
-        let shadowColor = Color.primary.opacity(0.4)
+        let shadowColor = Color.primary.opacity(disabled ? 0.1 : 0.4)
         configuration.label
             .foregroundColor(foregroundColor)
                 .padding()

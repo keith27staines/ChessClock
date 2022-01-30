@@ -7,8 +7,11 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class TwoClockViewModel: ObservableObject {
+    
+    @Published var gameDefinition: GameDefinition?
     
     static let testModel = TwoClockViewModel(
         timeControls: [
@@ -25,6 +28,12 @@ class TwoClockViewModel: ObservableObject {
     
     @Published var state: State = .waiting
     
+    let libraryViewModel = LibraryViewModel()
+    
+    var selectTimeControlButtonText: String {
+        gameDefinition == nil ? "Select time control" : "Change time control"
+    }
+    
     var hasFlagged: Bool {
         switch state {
         case .flagged: return true
@@ -36,7 +45,8 @@ class TwoClockViewModel: ObservableObject {
     var timeControls: [TimeControl]
     var clockModels: [ClockViewModel] = []
     var activePlayerIndex: Int
-    var subscriptions = Set<AnyCancellable>()
+    private var clockSubscriptions = Set<AnyCancellable>()
+    private var gameDefinitionSubscription: AnyCancellable?
     
     var inactivePlayerIndex: Int {
         activePlayerIndex == 0 ? 1 : 0
@@ -56,7 +66,7 @@ class TwoClockViewModel: ObservableObject {
     }
     
     var isTimerButtonDisabled: Bool {
-        false
+        gameDefinition == nil
     }
     
     func onDidTaptimer() {
@@ -75,9 +85,10 @@ class TwoClockViewModel: ObservableObject {
     }
     
     var isEndGameButtonDisabled: Bool {
+        guard gameDefinition != nil else { return true }
         switch state {
         case .waiting:
-            return false
+            return true
         case .playing:
             return false
         case .flagged:
@@ -86,6 +97,8 @@ class TwoClockViewModel: ObservableObject {
             return true
         }
     }
+    
+    var isTimeControlButtonDisabled: Bool { !isEndGameButtonDisabled }
     
     func onDidTapEndGame() {
         endGame()
@@ -112,9 +125,24 @@ class TwoClockViewModel: ObservableObject {
     }
     
     private func newGame() {
+        regenerateTimeControls()
         rebuildClocks()
         activePlayerIndex = 0
         state = .waiting
+    }
+    
+    private func regenerateTimeControls() {
+        timeControls = []
+        guard let gameDefinition = gameDefinition else { return }
+        var firstMove = 1
+        gameDefinition.controls.forEach { definition in
+            let lastMove = definition.numberOfMoves - 1
+            let control = TimeControl(
+                firstMoveNumber: firstMove, lastMoveNumber: lastMove, interval: definition.interval, increment: definition.increment
+            )
+            timeControls.append(control)
+            firstMove += definition.numberOfMoves
+        }
     }
     
     private func rebuildClocks() {
@@ -126,8 +154,8 @@ class TwoClockViewModel: ObservableObject {
         clockModels.forEach { clock in
             clock.stop()
         }
-        subscriptions.forEach { $0.cancel() }
-        subscriptions.removeAll()
+        clockSubscriptions.forEach { $0.cancel() }
+        clockSubscriptions.removeAll()
     }
     
     private func createClocks() {
@@ -144,7 +172,7 @@ class TwoClockViewModel: ObservableObject {
                 }
                 
             }
-        subscriptions.insert(clockStates)
+        clockSubscriptions.insert(clockStates)
     }
     
     private func toggleActivePlayerIndex() {
@@ -158,7 +186,11 @@ class TwoClockViewModel: ObservableObject {
             Player(name: "Player 2", pieceColor: .black)
         ]
         activePlayerIndex = 0
-        newGame()
+        gameDefinitionSubscription = libraryViewModel.$selectedGameDefinition
+            .sink { [weak self] gameDefinition in
+                self?.gameDefinition = gameDefinition
+                self?.newGame()
+            }
     }
     
 }
